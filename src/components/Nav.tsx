@@ -6,7 +6,7 @@ const Nav = () => {
 	const [showTwitter, setShowTwitter] = useState(false);
 	const [showGithub, setShowGithub] = useState(false);
 
-	const [top, setTop] = useState(false);
+	const [top, setTop] = useState(true);
 	const handleScroll = () => {
 		const position = window.pageYOffset;
 		position < 10 ? setTop(true) : setTop(false);
@@ -38,7 +38,7 @@ const Nav = () => {
 					href="https://github.com/boidushya/this-website-is-dope"
 					target={`_blank`}
 					rel="noreferrer"
-					className="bg-transparent bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-bold rounded-2xl transition-colors hover:border-opacity-50 hover:shadow-md"
+					className="justify-center bg-transparent bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-50 hover:shadow-md"
 				>
 					<RoughNotation
 						type="underline"
@@ -76,7 +76,7 @@ const Nav = () => {
 					href="https://twitter.com/boidushya"
 					target={`_blank`}
 					rel="noreferrer"
-					className="bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-bold rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md"
+					className="bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md justify-center"
 				>
 					<RoughNotation
 						type="underline"
