@@ -35,7 +35,7 @@ const Nav = () => {
 					onTouchStart={() => setShowGithub(true)}
 					onMouseOut={() => setShowGithub(false)}
 					onTouchEnd={() => setShowGithub(false)}
-					href="https://twitter.com/boidushya"
+					href="https://github.com/boidushya/this-website-is-dope"
 					target={`_blank`}
 					rel="noreferrer"
 					className="bg-transparent bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-bold rounded-2xl transition-colors hover:border-opacity-50 hover:shadow-md"
