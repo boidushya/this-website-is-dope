@@ -1,0 +1,151 @@
+:root {
+	--bg-color-h: 240;
+	--bg-color-s: 6%;
+	--bg-color-l: 10%;
+	--bg-color: hsl(var(--bg-color-h), var(--bg-color-l), var(--bg-color-s));
+	--text-color-h: 240;
+	--text-color-l: 5%;
+	--text-color-s: 95%;
+	--text-color: hsl(
+		var(--text-color-h),
+		var(--text-color-l),
+		var(--text-color-s)
+	);
+	--text-color-secondary-h: 240;
+	--text-color-secondary-l: 5%;
+	--text-color-secondary-s: 65%;
+	--text-color-secondary: hsl(
+		var(--text-color-secondary-h),
+		var(--text-color-secondary-l),
+		var(--text-color-secondary-s)
+	);
+	--box-bg: hsl(
+		var(--bg-color-h),
+		var(--bg-color-l),
+		calc(var(--bg-color-s) + 3%)
+	);
+	--box-border: hsl(
+		var(--bg-color-h),
+		var(--bg-color-l),
+		calc(var(--bg-color-s) + 8%)
+	);
+}
+
+body,
+#root {
+	background-image: url("https://transparenttextures.com/patterns/navy.png");
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	position: relative;
+	min-height: 100vh;
+}
+
+.text-animate-up {
+	transform: translateY(125%);
+	position: relative;
+	display: inline-block;
+	animation: animate-up 500ms ease forwards;
+	animation-delay: calc(var(--start) + var(--delay));
+}
+
+.main-text-in {
+	opacity: 0;
+	position: relative;
+	display: inline-block;
+	animation: animate-right 500ms ease forwards;
+	animation-delay: 600ms;
+	transform: translateX(-150%);
+}
+
+.card-wrapper {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 5rem;
+		height: 5rem;
+		left: var(--x);
+		top: var(--y);
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		opacity: var(--opacity);
+		transition: opacity 500ms ease;
+		@apply bg-yellow-600 bg-opacity-10 rounded-full blur-3xl;
+	}
+}
+
+.extra-wrapper {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		@apply rounded-2xl blur-0 bg-gradient-to-br from-yellow-400 via-violet-500 to-orange-500 brightness-0;
+		animation: flicker 2s linear forwards;
+		animation-delay: 500ms;
+	}
+}
+
+@keyframes flicker {
+	0% {
+		filter: blur(5px) brightness(1);
+	}
+	3% {
+		filter: blur(40px) brightness(0);
+	}
+	6% {
+		filter: blur(40px) brightness(0);
+	}
+	7% {
+		filter: blur(15px) brightness(1);
+	}
+	8% {
+		filter: blur(40px) brightness(0);
+	}
+	9% {
+		filter: blur(30px) brightness(1);
+	}
+	10% {
+		filter: blur(40px) brightness(0);
+	}
+	20% {
+		filter: blur(40px) brightness(1);
+	}
+	50% {
+		filter: blur(40px) brightness(1);
+	}
+	70% {
+		filter: blur(40px) brightness(1);
+	}
+	100% {
+		filter: blur(40px) brightness(1);
+	}
+}
+
+@keyframes animate-up {
+	0% {
+		transform: translateY(125%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes animate-right {
+	0% {
+		opacity: 0;
+		transform: translateX(-150%);
+	}
+	33% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
