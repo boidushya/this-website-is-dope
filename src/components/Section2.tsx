@@ -44,7 +44,7 @@ const Section2 = () => {
 						</span>
 					))}
 				</h1>
-				<div className="pt-4 flex gap-4 flex-wrap relative overflow-hidden">
+				<div className="pt-4 flex gap-4 flex-wrap relative overflow-hidden justify-center">
 					<Card
 						className="text-animate-up"
 						style={{
@@ -128,7 +128,7 @@ const Section2 = () => {
 						</div>
 					</Card>
 				</div>
-				<div className="pt-4 flex gap-4 flex-wrap relative overflow-hidden">
+				<div className="pt-4 flex gap-4 flex-wrap relative overflow-hidden justify-center">
 					<Card
 						className="text-animate-up"
 						style={{
@@ -158,7 +158,8 @@ const Section2 = () => {
 								Ok I'm not gonna lie
 							</h2>
 							<p className="text-gray-500 max-w-xs mt-0.5">
-								I'm running out of ideas for text to put here.
+								I'm running out of ideas for text to put here
+								tbh.
 							</p>
 						</div>
 					</Card>

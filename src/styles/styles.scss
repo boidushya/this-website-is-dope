@@ -31,19 +31,29 @@
 	);
 }
 
+body {
+	overflow: auto;
+}
+
+#root {
+	overflow: hidden;
+}
+
 body,
 #root {
-	background-image: url("https://transparenttextures.com/patterns/navy.png");
+	background-image: url("/navy.png");
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	position: relative;
 	min-height: 100vh;
+	@apply tracking-tighter;
 }
 
 .text-animate-up {
 	transform: translateY(125%);
 	position: relative;
 	display: inline-block;
+	opacity: 0;
 	animation: animate-up 500ms ease forwards;
 	animation-delay: calc(var(--start) + var(--delay));
 }
@@ -71,7 +81,7 @@ body,
 		z-index: -1;
 		opacity: var(--opacity);
 		transition: opacity 500ms ease;
-		@apply bg-yellow-600 bg-opacity-10 rounded-full blur-3xl;
+		@apply bg-yellow-600 bg-opacity-20 rounded-full blur-3xl;
 	}
 }
 
@@ -129,9 +139,14 @@ body,
 
 @keyframes animate-up {
 	0% {
+		opacity: 0;
 		transform: translateY(125%);
 	}
+	33% {
+		opacity: 0;
+	}
 	100% {
+		opacity: 1;
 		transform: translateY(0);
 	}
 }

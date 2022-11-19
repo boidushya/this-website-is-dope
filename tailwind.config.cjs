@@ -4,8 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Avenir", "Sen", "Helvetica", "Arial", "sans-serif"],
-				secondary: ["Manrope", "Helvetica", "Arial", "sans-serif"],
+				sans: ["Avenir", "Manrope", "Helvetica", "Arial", "sans-serif"],
 				serif: [
 					"Playfair Display",
 					"Georgia",

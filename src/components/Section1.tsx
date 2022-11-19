@@ -5,7 +5,8 @@ import { DefaultSection } from "./DefaultSection";
 
 const Section1 = () => {
 	const text = "No Fancy Illustrations".split(" ");
-	const subText = "B-but everything's so Smooth and Catchy??".split(" ");
+	const subText =
+		"B-but everything's so Smooth and Catchy A-AND CRISPY !??".split(" ");
 
 	return (
 		<DefaultSection>
@@ -50,7 +51,7 @@ const Section1 = () => {
 								"--delay": `${index * 0.1}s`,
 							}}
 						>
-							{index === 3 || index === 5 ? (
+							{index === 3 || index === 5 || index === 7 ? (
 								<span className="font-serif italic text-white text-4xl">
 									{word}
 								</span>

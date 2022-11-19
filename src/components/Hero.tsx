@@ -8,8 +8,8 @@ export const Hero = () => {
 	const textMain = "This Website Is".split(" ");
 	return (
 		<DefaultSection>
-			<div>
-				<p className="overflow-hidden text-left">
+			<div className="text-left">
+				<p className="overflow-hidden">
 					{textSub.map((word, index) => (
 						<span
 							key={index}
