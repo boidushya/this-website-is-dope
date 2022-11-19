@@ -6,7 +6,7 @@ const Section4 = () => {
 	const [show, setShow] = useState(false);
 	return (
 		<footer className="py-4 absolute bottom-0 grid place-items-center left-0 w-full">
-			<p className="text-gray-600 divide-x divide-gray-700 tracking-tight">
+			<p className="text-gray-600 lg:divide-x divide-gray-700 tracking-tight text-center">
 				<span className="inline-block pr-2">
 					&copy; copyright 2022{" "}
 					<a
