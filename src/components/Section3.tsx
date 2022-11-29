@@ -1,6 +1,6 @@
 import React from "react";
 import { RoughNotation } from "react-rough-notation";
-import { DefaultSection } from "./DefaultSection";
+import { DefaultSection } from "../elements/DefaultSection";
 
 const Section3 = () => {
 	return (

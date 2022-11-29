@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
 import { useEffect } from "react";
-import { DefaultSection } from "./DefaultSection";
+import { DefaultSection } from "../elements/DefaultSection";
 
 const Section1 = () => {
 	const text = "No Fancy Illustrations".split(" ");
@@ -11,7 +11,7 @@ const Section1 = () => {
 	return (
 		<DefaultSection>
 			<div>
-				<h1 className="overflow-hidden text-4xl leading-loose">
+				<h1 className="overflow-hidden text-4xl leading-loose font-bold">
 					{text.map((word, index) => (
 						<span
 							key={index}
@@ -40,7 +40,7 @@ const Section1 = () => {
 						</span>
 					))}
 				</h1>
-				<h1 className="overflow-hidden text-2xl leading-loose text-gray-400">
+				<h3 className="font-medium overflow-hidden text-2xl leading-loose text-gray-400">
 					{subText.map((word, index) => (
 						<span
 							key={index}
@@ -61,7 +61,7 @@ const Section1 = () => {
 							{index !== subText.length - 1 && " "}
 						</span>
 					))}
-				</h1>
+				</h3>
 			</div>
 		</DefaultSection>
 	);

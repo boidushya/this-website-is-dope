@@ -3,3 +3,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--bg-color-h: 240;
+	--bg-color-s: 6%;
+	--bg-color-l: 10%;
+	--bg-color: hsl(var(--bg-color-h), var(--bg-color-l), var(--bg-color-s));
+	--text-color-h: 240;
+	--text-color-l: 5%;
+	--text-color-s: 95%;
+	--text-color: hsl(
+		var(--text-color-h),
+		var(--text-color-l),
+		var(--text-color-s)
+	);
+	--text-color-secondary-h: 240;
+	--text-color-secondary-l: 5%;
+	--text-color-secondary-s: 65%;
+	--text-color-secondary: hsl(
+		var(--text-color-secondary-h),
+		var(--text-color-secondary-l),
+		var(--text-color-secondary-s)
+	);
+	--box-bg: hsl(
+		var(--bg-color-h),
+		var(--bg-color-l),
+		calc(var(--bg-color-s) + 3%)
+	);
+	--box-border: hsl(
+		var(--bg-color-h),
+		var(--bg-color-l),
+		calc(var(--bg-color-s) + 8%)
+	);
+}
+
+h1 {
+	@apply text-6xl font-black;
+}
+
+h2 {
+	@apply text-5xl font-extrabold;
+}
+
+h3 {
+	color: var(--text-color);
+	@apply text-4xl font-bold;
+}
+
+h4 {
+	color: var(--text-color);
+	@apply text-2xl font-bold;
+}
+
+h5 {
+	color: var(--text-color-secondary);
+	@apply text-xl font-semibold;
+}
+
+h6 {
+	color: var(--text-color-secondary);
+	@apply text-lg font-medium;
+}
