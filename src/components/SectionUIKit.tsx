@@ -236,6 +236,7 @@ const ModalSection: React.FC<{
 				<button
 					onClick={() => setIsModalOpen(true)}
 					style={{
+						// Dummy
 						// @ts-ignore
 						"--start": "1.5s",
 						"--delay": `${0.25}s`,
