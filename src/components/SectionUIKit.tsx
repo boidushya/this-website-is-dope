@@ -166,7 +166,14 @@ const ModalSection: React.FC<{
 	return (
 		<ContainerSection>
 			<Divider text="Modals/Prompts" />
-			<div className="ReactModal__Content overflow-hidden">
+			<div
+				className="ReactModal__Content overflow-hidden block-animate-up"
+				style={{
+					// @ts-ignore
+					"--start": "750ms",
+					"--delay": `${0.25}s`,
+				}}
+			>
 				<div className="flex justify-between py-6 px-8 text-lg font-secondary sticky bg-zinc-900 top-0 left-0 z-20 border-b border-gray-400 border-opacity-10">
 					<span>Modal</span>
 					<a className="cursor-pointer text-zinc-600 hover:text-zinc-400 transition-colors">
@@ -190,7 +197,14 @@ const ModalSection: React.FC<{
 					<h4>This is a Modal</h4>
 				</div>
 			</div>
-			<div className="ReactModal__Content overflow-hidden">
+			<div
+				className="ReactModal__Content overflow-hidden block-animate-up mt-4"
+				style={{
+					// @ts-ignore
+					"--start": "750ms",
+					"--delay": `${0.375}s`,
+				}}
+			>
 				<div className="flex justify-between py-6 px-8 text-lg font-secondary sticky bg-zinc-900 top-0 left-0 z-20 border-b border-gray-400 border-opacity-10">
 					<span>Prompt</span>
 					<a className="cursor-pointer text-zinc-600 hover:text-zinc-400 transition-colors">
@@ -218,10 +232,15 @@ const ModalSection: React.FC<{
 					<Button variant="secondary">Close</Button>
 				</div>
 			</div>
-			<div className="flex gap-12 flex-wrap justify-center mt-8">
+			<div className="flex gap-12 flex-wrap justify-center mt-8 ">
 				<button
 					onClick={() => setIsModalOpen(true)}
-					className="bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md justify-center cursor-pointer"
+					style={{
+						// @ts-ignore
+						"--start": "1.5s",
+						"--delay": `${0.25}s`,
+					}}
+					className="block-animate-up bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md justify-center cursor-pointer"
 				>
 					Open modal
 				</button>
@@ -234,7 +253,12 @@ const ModalSection: React.FC<{
 				</Modal>
 				<button
 					onClick={() => setIsPromptOpen(true)}
-					className="bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md justify-center cursor-pointer"
+					style={{
+						// @ts-ignore
+						"--start": "1.5s",
+						"--delay": `${0.375}s`,
+					}}
+					className="block-animate-up bg-yellow-400 bg-opacity-25 border border-yellow-300 border-opacity-25 text-white flex items-center gap-2 py-2 px-4 font-semibold tracking-normal rounded-2xl transition-colors hover:border-opacity-0 hover:shadow-md justify-center cursor-pointer"
 				>
 					Open prompt
 				</button>
