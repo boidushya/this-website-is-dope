@@ -36,7 +36,7 @@ const Card: React.FC<React.HTMLProps<HTMLDivElement>> = props => {
 				"--opacity": 0,
 				...props.style,
 			}}
-			className={`py-4 px-4 text-left rounded-2xl bg-gray-500 bg-opacity-[0.1] border border-gray-400 border-opacity-10 backdrop-blur-xl shadow-md w-fit space-y-4 card-wrapper max-w-xs ${props.className}`}
+			className={`flex-1 py-4 px-4 text-left rounded-2xl bg-gray-500 bg-opacity-[0.1] border border-gray-400 border-opacity-10 backdrop-blur-xl shadow-md w-fit space-y-4 card-wrapper max-w-xs ${props.className}`}
 		>
 			{props.children}
 		</div>

@@ -36,7 +36,8 @@ body,
 	);
 }
 
-.divider {
+.divider,
+.bg-primary {
 	background-image: url("/navy.png");
 	background-color: var(--bg-color);
 }
@@ -71,7 +72,7 @@ body,
 		var(--bg-color-h),
 		var(--bg-color-l),
 		var(--bg-color-s),
-		0.9
+		0.75
 	) !important;
 	transition: opacity 200ms;
 }
@@ -93,7 +94,7 @@ body,
 }
 
 .ReactModal__Content {
-	@apply mx-auto max-w-2xl transition-all scale-90 p-6 text-left rounded-2xl bg-gray-500 bg-opacity-[0.1] border border-gray-400 border-opacity-10 backdrop-blur-xl shadow-lg space-y-4;
+	@apply mx-auto max-w-2xl transition-all scale-90 text-left rounded-2xl bg-gray-500 bg-opacity-[0.1] border border-gray-400 border-opacity-10 backdrop-blur-xl shadow-lg;
 }
 
 .ReactModal__Body--open,
