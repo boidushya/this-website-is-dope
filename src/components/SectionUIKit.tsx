@@ -4,6 +4,7 @@ import { RoughNotation } from "react-rough-notation";
 import { ContainerSection, DefaultSection } from "@/elements/DefaultSection";
 import Modal from "@/elements/Modal";
 import Button from "@/elements/Button";
+import { toast } from "react-toastify";
 
 const HeadingSection: React.FC<{
 	startDelay: Number;
@@ -276,6 +277,150 @@ const ModalSection: React.FC<{
 	);
 };
 
+const ToastSection: React.FC<{
+	startDelay: number;
+}> = ({ startDelay }) => {
+	const notify = () => toast("This is a toast");
+	const notifyInfo = () => toast.info("This is a toast");
+	const notifyWarning = () => toast.warning("This is a toast");
+	const notifySuccess = () => toast.success("This is a toast");
+	const notifyError = () => toast.error("This is a toast");
+	return (
+		<ContainerSection className="w-full">
+			<Divider text="Toasts" />
+			<div className="space-y-1 mx-auto w-fit">
+				<div className="flex gap-4 flex-wrap justify-center">
+					<Button
+						variant="tertiary"
+						onClick={notify}
+						className="block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "0.5s",
+							"--delay": `${0.2}s`,
+						}}
+					>
+						Trigger Regular Toast
+					</Button>
+					<Button
+						variant="primary"
+						onClick={notifyWarning}
+						className="block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "0.5s",
+							"--delay": `${0.2 + 0.05}s`,
+						}}
+					>
+						Trigger Warning Toast
+					</Button>
+					<Button
+						variant="primary"
+						className="bg-blue-400 border-blue-300 block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "0.5s",
+							"--delay": `${0.2 + 0.1}s`,
+						}}
+						onClick={notifyInfo}
+					>
+						Trigger Info Toast
+					</Button>
+					<Button
+						variant="primary"
+						className="bg-red-400 border-red-300 block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "0.5s",
+							"--delay": `${0.2 + 0.15}s`,
+						}}
+						onClick={notifyError}
+					>
+						Trigger Error Toast
+					</Button>
+					<Button
+						variant="primary"
+						className="bg-green-400 border-green-300 block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "0.5s",
+							"--delay": `${0.2 + 0.2}s`,
+						}}
+						onClick={notifySuccess}
+					>
+						Trigger Success Toast
+					</Button>
+				</div>
+			</div>
+		</ContainerSection>
+	);
+};
+
+const MoreSection: React.FC<{
+	startDelay: number;
+}> = ({ startDelay }) => {
+	const [show, setShow] = useState(false);
+	return (
+		<ContainerSection className="w-full">
+			<Divider text="More" />
+			<div className="space-y-1 mx-auto w-fit">
+				<div className="flex gap-4 flex-wrap justify-center">
+					<h3
+						className="block-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "1s",
+							"--delay": `${0.375}s`,
+						}}
+					>
+						More coming{" "}
+						<RoughNotation
+							type="underline"
+							show={true}
+							strokeWidth={3}
+							animationDuration={400}
+							animationDelay={startDelay}
+							color="rgb(253 224 71 / 0.25)"
+						>
+							soon...
+						</RoughNotation>
+					</h3>
+					<p
+						className="font-extra text-animate-up"
+						style={{
+							// @ts-ignore
+							"--start": "1s",
+							"--delay": `${0.5}s`,
+						}}
+					>
+						Meanwhile you can add elements to the UI Kit through
+						creating a{" "}
+						<a
+							href={`https://github.com/boidushya/this-website-is-dope/pulls`}
+							target="_blank"
+							rel="noreferrer"
+							className="text-zinc-400 hover:text-zinc-100 cursor-pointer"
+							onMouseOut={() => setShow(false)}
+							onMouseOver={() => setShow(true)}
+						>
+							<RoughNotation
+								type="underline"
+								show={show}
+								strokeWidth={3}
+								animationDuration={400}
+								animationDelay={0}
+								color="rgb(253 224 71 / 0.25)"
+							>
+								Pull Request
+							</RoughNotation>
+						</a>
+					</p>
+				</div>
+			</div>
+		</ContainerSection>
+	);
+};
+
 const SectionUIKit = () => {
 	return (
 		<div>
@@ -283,6 +428,8 @@ const SectionUIKit = () => {
 			<FontFamilySection startDelay={1000} />
 			<FontWeightSection startDelay={1200} />
 			<ModalSection startDelay={1400} />
+			<ToastSection startDelay={1600} />
+			<MoreSection startDelay={1800} />
 		</div>
 	);
 };

@@ -1,0 +1,86 @@
+:root {
+	--toastify-color-light: #fff;
+	--toastify-color-dark: hsl(
+		var(--bg-color-h),
+		var(--bg-color-l),
+		calc(var(--bg-color-s) + 5%)
+	);
+	--toastify-color-info: theme("colors.blue.400");
+	--toastify-color-success: theme("colors.green.400");
+	--toastify-color-warning: theme("colors.yellow.400");
+	--toastify-color-error: theme("colors.red.400");
+	--toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+	--toastify-icon-color-info: var(--toastify-color-info);
+	--toastify-icon-color-success: var(--toastify-color-success);
+	--toastify-icon-color-warning: var(--toastify-color-warning);
+	--toastify-icon-color-error: var(--toastify-color-error);
+
+	--toastify-toast-width: 320px;
+	--toastify-toast-background: #fff;
+	--toastify-toast-min-height: 64px;
+	--toastify-toast-max-height: 800px;
+	--toastify-font-family: Avenir, Manrope, Helvetica, Arial, sans-serif;
+	--toastify-z-index: 9999;
+
+	--toastify-text-color-light: #757575;
+	--toastify-text-color-dark: var(--text-color);
+
+	//Used only for colored theme
+	--toastify-text-color-info: #fff;
+	--toastify-text-color-success: #fff;
+	--toastify-text-color-warning: #fff;
+	--toastify-text-color-error: #fff;
+
+	--toastify-spinner-color: #616161;
+	--toastify-spinner-color-empty-area: #e0e0e0;
+
+	// Used when no type is provided
+	// toast("**hello**")
+	--toastify-color-progress-light: linear-gradient(
+		to right,
+		#4cd964,
+		#5ac8fa,
+		#007aff,
+		#34aadc,
+		#5856d6,
+		#ff2d55
+	);
+	// Used when no type is provided
+	--toastify-color-progress-dark: linear-gradient(
+		to right,
+		theme("colors.yellow.600 / 75%"),
+		theme("colors.yellow.400 / 75%")
+	);
+	--toastify-color-progress-info: var(--toastify-color-info);
+	--toastify-color-progress-success: var(--toastify-color-success);
+	--toastify-color-progress-warning: var(--toastify-color-warning);
+	--toastify-color-progress-error: var(--toastify-color-error);
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translate(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+.slideIn {
+	animation: slideIn 0.2s ease both;
+}
+
+.slideOut {
+	animation: slideIn 0.3s ease-out both reverse;
+}
+
+.Toastify__toast-body {
+	@apply text-base font-medium;
+}
+
+.Toastify__toast {
+	@apply rounded-lg shadow-lg border border-zinc-600 border-opacity-50 backdrop-blur-md;
+}
