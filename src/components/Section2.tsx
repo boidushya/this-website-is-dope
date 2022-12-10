@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { RoughNotation } from "react-rough-notation";
-import { useEffect } from "react";
-import { DefaultSection } from "./DefaultSection";
-import Card from "./Card";
+import { DefaultSection } from "../elements/DefaultSection";
+import Card from "@/elements/Card";
 
 const Section2 = () => {
 	const text =
@@ -13,14 +12,14 @@ const Section2 = () => {
 	return (
 		<DefaultSection>
 			<div>
-				<h1 className="overflow-hidden text-2xl leading-loose text-gray-400">
+				<h4 className="overflow-hidden text-2xl leading-loose text-gray-400">
 					{text.map((word, index) => (
 						<span
 							key={index}
 							className="text-animate-up whitespace-pre inline-block"
 							style={{
 								// @ts-ignore
-								"--start": "600ms",
+								"--start": "0ms",
 								"--delay": `${index * 0.075}s`,
 							}}
 						>
@@ -43,7 +42,7 @@ const Section2 = () => {
 							{index !== text.length - 1 && " "}
 						</span>
 					))}
-				</h1>
+				</h4>
 				<div className="pt-4 flex gap-4 flex-wrap relative overflow-hidden justify-center">
 					<Card
 						className="text-animate-up"

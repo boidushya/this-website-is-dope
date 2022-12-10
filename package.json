@@ -9,14 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@tippyjs/react": "^4.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-rough-notation": "^1.0.3",
+    "react-toastify": "^9.1.1",
     "sass": "^1.56.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@types/react-modal": "^3.13.1",
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",

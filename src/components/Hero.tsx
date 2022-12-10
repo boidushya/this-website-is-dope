@@ -1,7 +1,7 @@
 import React from "react";
 import { RoughNotation } from "react-rough-notation";
 import { useRef } from "react";
-import { DefaultSection } from "./DefaultSection";
+import { DefaultSection } from "../elements/DefaultSection";
 
 export const Hero = () => {
 	const textSub = "Ok so, fyi".split(" ");

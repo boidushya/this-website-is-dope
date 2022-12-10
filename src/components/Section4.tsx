@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { DefaultSection } from "./DefaultSection";
+import { DefaultSection } from "../elements/DefaultSection";
 import { RoughNotation } from "react-rough-notation";
 
 const Section4 = () => {
